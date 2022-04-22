@@ -1,0 +1,58 @@
+%
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[greek,english]{babel}
+\usepackage{alphabeta}
+
+
+\begin{document}
+
+
+\title{
+    %Υποδομή σαν Κώδικας και Αυτοματοποιημένη Διαχείρηση  \\
+        \large Νέες πρακτικές με Ansible}
+
+\author{Δημήτριος Μακρής}
+\date{\today}
+\maketitle
+
+\renewcommand*\contentsname{Περιεχόμενα}
+\tableofcontents
+
+\section{Εισαγωγή}
+Μέσα στα χρόνια, ο κλάδος του ΙΤ έχει αλλάξει - τόσο ως προς την χρήση του όσο και τη λειτουργία του.\\
+Με τη βοήθεια τεχνολογιών αυτοματισμού, όπως η \textbf{Ansible} δίνεται η ευκαιρία στους ΙΤ η έννοια της υποδομής (\textbf{Infrastructure}) να απαιτεί πολύ λιγότερο χρόνο συντήρησης, αφού δεν διαχειριζόμαστε κάθε σύστημα ξεχωριστά αλλά γράφουμε εφαρμογές που φέρνουν το κάθε σύστημα στην κατάσταση που εμείς επιθυμούμε.\hfill \break
+Εκεί που η Ansible ξεχωρίζει είναι στην ανάπτυξη λογισμικού αφού πλατφόρμες όπως το Gitlab, προσφέρουν τη δυνατότητα ένταξης Ansible playbooks, με τη μορφή αρχείων Συνεχόυς Ενσωμάτωσης (\textbf{Continous Integration}).\hfill \break
+Ετσι, οι προγραμματιστές δημιουργούν αγωγούς ή αλλιως \textbf{pipelines} τα οποία αυτόματα μπορούν να τρέξουν μια η περισσότερες εργασίες, και να συνεχίσουν να λειτουργούν σε προδιαγραμμένο χρόνο, χωρίς την ανάγκη ανθρώπινης παρέμβασης.\hfill \break
+Τ
+
+\newpage
+
+\section{Συνοπτική οργάνωση εργασίας}
+%\hfill\break
+\begin{itemize}
+    \item Εισαγωγή
+    \item Σχετικά εργαλεία που χρησιμοποιούνται για διαχείριση διαμόρφωσης 
+    \item Ansible \\
+        - Εισαγωγή\\
+        - Invertory\\
+        - Ad-Hoc Commands\\
+        - Playbooks\\
+        - Variables\\
+        - Facts\\
+        - Task Control\\
+        - Templates\\
+        - Roles\\
+     Συμπεράσματα
+    \item Διαχείριση Διαμόφωσης στην πράξη\\
+        3 Playbooks - και πως λειτουργούν 
+    \item Δοκιμές και αποτελέσματα
+    \item Oι παλαιότερες πρακτικές διαχείρισης χρειάζονται ακόμα?
+    \item Συμπεράσματα 
+    \item Αναφορές
+    \item Βιβλιογραφία
+\end{itemize}
+%\newpage
+%\tableofcontents
+
+\end{document}
