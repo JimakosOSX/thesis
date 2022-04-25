@@ -1,20 +1,29 @@
 ---
 obsolete_fw:
-    - iptables
-    - ebtables
-    - nftables
+  - iptables
+  - ebtables
+  - nftables
 dependencies:
-    - certbot
-    - python3-certbot-apache
-    - postfix
-    - postfix-mysql
-    - dovecot-core 
-    - dovecot-imapd 
-    - dovecot-pop3d 
-    - dovecot-lmtpd 
-    - dovecot-mysql 
-    - mariadb-server
-    - firewalld
-    - iptables
-    - ebtables
-    - nftables
+  - certbot
+  - python3-certbot-apache
+  - postfix
+  - postfix-mysql
+  - dovecot-core
+  - dovecot-imapd
+  - dovecot-pop3d
+  - dovecot-lmtpd
+  - dovecot-mysql
+  - mariadb-server
+  - firewalld
+  - iptables
+  - ebtables
+  - nftables
+  - bind9
+open_ports:
+  - 25/tcp
+  - 465/tcp
+  - 587/tcp
+  - 110/tcp
+  - 995/tcp
+  - 143/tcp
+  - 993/tcp

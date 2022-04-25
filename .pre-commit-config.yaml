@@ -1,0 +1,5 @@
+---
+- repo: https://github.com/ansible-community/ansible-lint.git
+  rev: 61ed3ea
+  hooks:
+    - id: ansible-lint
