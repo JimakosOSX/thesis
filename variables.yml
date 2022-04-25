@@ -1,0 +1,20 @@
+---
+obsolete_fw:
+    - iptables
+    - ebtables
+    - nftables
+dependencies:
+    - certbot
+    - python3-certbot-apache
+    - postfix
+    - postfix-mysql
+    - dovecot-core 
+    - dovecot-imapd 
+    - dovecot-pop3d 
+    - dovecot-lmtpd 
+    - dovecot-mysql 
+    - mariadb-server
+    - firewalld
+    - iptables
+    - ebtables
+    - nftables
