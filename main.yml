@@ -4,7 +4,7 @@
   remote_user: root
   gather_facts: true # disable for fast testing only
   vars:
-    server_hostname: headbeef.xyz
+    fqdn: headbeef.xyz
   vars_files:
     - ./variables.yml
 
@@ -34,10 +34,11 @@
         state: started
         enabled: true
         masked: false
-    - name: Set drop as default firewall zone
-      command: "firewall-cmd --set-default-zone=drop"
-    - name: Reload firewalld to apply changes
-      command: "firewall-cmd --reload"
+    - block:
+      - name: Set drop as default firewall zone
+        command: "firewall-cmd --set-default-zone=drop"
+      - name: Reload firewalld to apply changes
+        command: "firewall-cmd --reload"
     - name: Enable ssh access on default zone
       firewalld:
         service: ssh
@@ -53,5 +54,10 @@
       loop: '{{ open_ports }}'
     - name: Set hostname
       hostname:
-        name: '{{ server_hostname }}'
+        name: '{{ fqdn }}'
         use: systemd
+    - name: Change /etc/hosts
+      lineinfile:
+        path: /etc/hosts
+        regexp: '^127\.0\.1\.1'
+        line: 127.0.1.1 {{ fqdn }}
