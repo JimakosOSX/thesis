@@ -1,10 +1,9 @@
 # thesis
 ## This is documents and files needed for my thesis project
 
-Ideas so far
-
+WIP 
 - 1 playbook that creates a mail server
-- 1 playbook that ???
+- 2 more playbooks
 
-# pre-commit hoocks
+# pre-commit hooks
 we will use ansible-lint for the playbooks
