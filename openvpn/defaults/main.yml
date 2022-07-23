@@ -1,0 +1,38 @@
+---
+- hosts: do
+  remote_user: root
+  gather_facts: True
+  vars:
+    fqdn: "headbeef.xyz"
+  tasks:
+  - name: Install OpenVPN
+    dnf:
+      name:
+        - openvpn
+        - easy-rsa
+      state: latest
+      update_cache: True
+
+  - name: Create a directory if it does not exist
+    file:
+      path: /etc/openvpn/easy-rsa
+      state: directory
+      owner: root
+      group: root
+      mode: '0755'
+
+  - name: Copy key certificate gen scripts
+    copy:
+      src: "{{ item }}"
+      dest: /etc/openpn/easy-rsa
+      owner: root
+      mode: 600
+    with_fileglob:
+      - /usr/share/easy-rsa/3/*
+  
+  - name: Let easyrsa start a new PKI
+    shell: /etc/openvpn/easy-rsa/easyrsa init-pki >> /root/.easyrsa_init-pki
+    creates: /root/.easyrsa_init-pki
+
+  - name: Let easyrsa build the CA certificate
+

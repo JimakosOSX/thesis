@@ -1,0 +1,11 @@
+## File for easy-rsa vars
+
+set_var EASYRSA_REQ_COUNTRY	"GR"
+set_var EASYRSA_REQ_PROVINCE	"ATTIKA"
+set_var EASYRSA_REQ_CITY	"ATHENS"
+set_var EASYRSA_REQ_ORG	"Douleutaras"
+set_var EASYRSA_REQ_EMAIL	"leok@some.mail"
+set_var EASYRSA_REQ_OU		"DevOps"
+
+set_var EASYRSA_ALGO "ec"
+set_var EASYRSA_DIGEST "sha512"
